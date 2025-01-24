@@ -1,0 +1,245 @@
+body {
+    background: hsl(226, 43%, 10%);
+    font-family: "Rubik";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+#main-container {
+    height: 160px;
+    position: relative;
+    margin: 20px;
+}
+
+#main {
+    position: absolute;
+    background: hsl(246, 80%, 60%);
+    height: 70%;
+    width: 100%;
+    top: 0;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 2; /* Main overlaps small-main */
+}
+
+#small-main {
+    position: absolute;
+    background: hsl(235, 46%, 20%);
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    padding-top: 30px;
+    border-radius: 20px;
+    }
+    
+    #menu-div {
+        display: flex; /* Enables flexbox for alignment */
+    justify-content: space-around; /* Center horizontally */
+    align-items: flex-end; /* Push content to the bottom */
+    }
+    
+    
+.menu {
+    display: inline-block;   
+    bottom: 0;
+    color: hsl(236, 100%, 87%);
+}
+
+.menu:hover {
+    color: #fff;
+}
+
+.small-text {
+    color: hsl(236, 100%, 87%);
+    margin: 0;
+    display: inline-block;
+    
+}
+
+.big-text {
+    font-size: 26px;
+    color: #fff;
+}
+
+#main img {
+    width: 60px; height: auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: 16px; 
+}
+
+
+/* working on the other items*/
+
+.small-container {
+    margin: 20px;
+    position: relative;
+    height: 140px;
+}
+
+.outer-item, .inner-item  {
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+/* the outer card*/
+.outer-item {
+    height: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: right; 
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.outer-item img {
+    position: absolute;
+    top: -5px;
+    width: 60px; height: 60px;    
+}
+
+#work {
+    background-color: hsl(15, 100%, 70%);
+}
+
+#play {
+    background-color: hsl(195, 74%, 62%);
+}
+
+#study {
+    background-color: hsl(348, 100%, 68%);
+}
+
+#exercise {
+    background-color: hsl(145, 58%, 55%);
+}
+
+#social {
+    background-color: hsl(264, 64%, 52%);
+}
+
+#selfCare {
+    background-color: hsl(43, 84%, 65%);
+}
+
+/* the inner card */
+.inner-item {
+    background-color: hsl(235, 46%, 20%);
+    height: 80%;
+    padding: 10px 20px; /* Reduced vertical padding */
+    position: absolute;
+    width: 100%;
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: 1fr 1fr; /* Left column for title/current-time, right for svg/previous-period */
+    align-items: center; /* Vertically center the items */
+    row-gap: 2px; /* Adds space between the top and bottom items */
+    bottom: 0;
+    z-index: 2;
+}
+
+.inner-item p {
+    margin: 0;
+}
+
+.inner-item:hover {
+    background-color: hsl(235, 45%, 61%)
+}
+
+/* contents of the inner cards */
+.title {
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
+
+.svg {
+    color: #fff;
+    justify-self: end; /* Ensures the ellipsis is positioned at the end of the container */
+}
+
+.current-time {
+    font-size: 30px;
+    color: #fff;
+}
+
+.previous-period {
+    color: hsl(236, 100%, 87%);
+    font-size: 14px;
+    justify-self: end; /* Align the previous-period to the right */
+}
+
+/* making the design responsive */
+
+@media only screen and (min-width: 768px) {
+    .main {
+        display: grid;
+        grid-template-columns: auto auto auto auto; 
+        gap: 20px;  
+        height: 360px; 
+        width: 820px; 
+        margin: 50% auto 50% auto;   
+        
+    }
+    
+    #main-container {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: 100%;
+        top: 0;
+        display: block;
+        margin: 0;
+        width: 190px;
+    }
+    
+    #main {
+        display: block;
+        padding: 25px;
+    }
+    
+    #small-main, .menu {
+        display: block;
+    }
+    
+    #small-main {
+        padding: 30px 20px 10px 20px;
+    }
+    
+    #menu-div {
+        position: absolute;
+        bottom: 0;
+        display: block;
+    }
+    
+     .small-container {
+        margin: 0;
+        height: 180px;
+        width: 190px;
+    }
+    
+    .small-text {
+        margin-top: 20px;
+    }
+    
+    .current-time {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
+    
+    .previous-period {   
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: start;
+    }
+}
