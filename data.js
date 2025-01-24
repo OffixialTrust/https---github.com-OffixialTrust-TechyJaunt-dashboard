@@ -1,4 +1,4 @@
-const data = [
+const file = `[
   {
     "title": "Work",
     "timeframes": {
@@ -101,6 +101,6 @@ const data = [
       }
     }
   }
-]
+]`
 
-export default data;
+export default file;
