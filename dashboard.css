@@ -164,7 +164,7 @@ body {
 
 /* contents of the inner cards */
 .title {
-    font-weight: bold;
+    font-weight: 450;
     color: #fff;
     font-size: 16px;
 }
@@ -225,10 +225,11 @@ body {
     
     #menu-div {
         display: block;
+        margin: 0;
     }
 
     #weekly {
-        margin: 8px 0;
+        margin: 10px 0;
     }
     
     .small-container {
