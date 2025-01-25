@@ -37,19 +37,25 @@ body {
     z-index: 1;
     padding-top: 30px;
     border-radius: 20px;
-    }
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+}
     
-    #menu-div {
-        display: flex; /* Enables flexbox for alignment */
+#menu-div {
+    display: flex; /* Enables flexbox for alignment */
     justify-content: space-around; /* Center horizontally */
     align-items: flex-end; /* Push content to the bottom */
-    }
+    width: 100%;
+}
     
     
-.menu {
-    display: inline-block;   
+.menu {   
     bottom: 0;
     color: hsl(236, 100%, 87%);
+    background-color: hsl(235, 46%, 20%);
+    border: none;
+    font-size: 16px;
 }
 
 .menu:hover {
@@ -182,14 +188,20 @@ body {
 /* making the design responsive */
 
 @media only screen and (min-width: 768px) {
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .main {
         display: grid;
         grid-template-columns: auto auto auto auto; 
         gap: 20px;  
         height: 360px; 
-        width: 820px; 
-        margin: 25% auto 25% auto;   
-        
+        width: 860px;        
     }
     
     #main-container {
@@ -199,7 +211,7 @@ body {
         top: 0;
         display: block;
         margin: 0;
-        width: 190px;
+        width: 200px;
     }
     
     #main {
@@ -207,24 +219,22 @@ body {
         padding: 25px;
     }
     
-    #small-main, .menu {
+    #menu-div, .menu {
         display: block;
-    }
-    
-    #small-main {
-        padding: 30px 20px 10px 20px;
     }
     
     #menu-div {
-        position: absolute;
-        bottom: 0;
         display: block;
     }
+
+    #weekly {
+        margin: 8px 0;
+    }
     
-     .small-container {
+    .small-container {
         margin: 0;
         height: 180px;
-        width: 190px;
+        width: 200px;
     }
     
     .small-text {
