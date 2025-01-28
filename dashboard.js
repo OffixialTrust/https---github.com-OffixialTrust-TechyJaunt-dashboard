@@ -12,38 +12,43 @@ function className(name) {
     return document.querySelectorAll(name);
 }
 
+// template to change data
+function info(index, time, period) {
+    return data[index].timeframes[time][period];
+}
+
+
 // For Daily
 id("daily").addEventListener("click", () => {
     className(".timeframe").forEach((element) => {
      element.textContent = "Yesterday";  
     });
     
-    
     const timeframe = "daily";
     
     // for work
-    id("work-current").textContent = data[0].timeframes[timeframe].current;
-    id("work-previous").textContent = data[0].timeframes[timeframe].previous;
+    id("work-current").textContent = info(0, timeframe, "current");
+    id("work-previous").textContent = info(0, timeframe, "previous");
     
     // for play
-    id("play-current").textContent = data[1].timeframes[timeframe].current;
-    id("play-previous").textContent = data[1].timeframes[timeframe].previous;
+    id("play-current").textContent = info(1, timeframe, "current");
+    id("play-previous").textContent = info(1, timeframe, "previous");
     
     // for study
-    id("study-current").textContent = data[2].timeframes[timeframe].current;
-    id("study-previous").textContent = data[2].timeframes[timeframe].previous;
+    id("study-current").textContent = info(2, timeframe, "current");
+    id("study-previous").textContent = info(2, timeframe, "previous");
     
     // for exercise
-    id("exercise-current").textContent = data[3].timeframes[timeframe].current;
-    id("exercise-previous").textContent = data[3].timeframes[timeframe].previous;
+    id("exercise-current").textContent = info(3, timeframe, "current");
+    id("exercise-previous").textContent = info(3, timeframe, "previous");;
     
     // for social
-    id("social-current").textContent = data[4].timeframes[timeframe].current;
-    id("social-previous").textContent = data[4].timeframes[timeframe].previous;
+    id("social-current").textContent = info(4, timeframe, "current");
+    id("social-previous").textContent = info(4, timeframe, "previous");
     
     // for self care
-    id("selfCare-current").textContent = data[5].timeframes[timeframe].current;
-    id("selfCare-previous").textContent = data[5].timeframes[timeframe].previous;
+    id("selfCare-current").textContent = info(5, timeframe, "current");
+    id("selfCare-previous").textContent = info(5, timeframe, "previous");
     
 });
     
@@ -57,28 +62,28 @@ id("weekly").addEventListener("click", () => {
     const timeframe = "weekly";
     
     // for work
-    id("work-current").textContent = data[0].timeframes[timeframe].current;
-    id("work-previous").textContent = data[0].timeframes[timeframe].previous;
+    id("work-current").textContent = info(0, timeframe, "current");
+    id("work-previous").textContent = info(0, timeframe, "previous");
     
-    //for play
-    id("play-current").textContent = data[1].timeframes[timeframe].current;
-    id("play-previous").textContent = data[1].timeframes[timeframe].previous;
+    // for play
+    id("play-current").textContent = info(1, timeframe, "current");
+    id("play-previous").textContent = info(1, timeframe, "previous");
     
     // for study
-    id("study-current").textContent = data[2].timeframes[timeframe].current;
-    id("study-previous").textContent = data[2].timeframes[timeframe].previous;
+    id("study-current").textContent = info(2, timeframe, "current");
+    id("study-previous").textContent = info(2, timeframe, "previous");
     
     // for exercise
-    id("exercise-current").textContent = data[3].timeframes[timeframe].current;
-    id("exercise-previous").textContent = data[3].timeframes[timeframe].previous;
+    id("exercise-current").textContent = info(3, timeframe, "current");
+    id("exercise-previous").textContent = info(3, timeframe, "previous");;
     
     // for social
-    id("social-current").textContent = data[4].timeframes[timeframe].current;
-    id("social-previous").textContent = data[4].timeframes[timeframe].previous;
+    id("social-current").textContent = info(4, timeframe, "current");
+    id("social-previous").textContent = info(4, timeframe, "previous");
     
     // for self care
-    id("selfCare-current").textContent = data[5].timeframes[timeframe].current;
-    id("selfCare-previous").textContent = data[5].timeframes[timeframe].previous;
+    id("selfCare-current").textContent = info(5, timeframe, "current");
+    id("selfCare-previous").textContent = info(5, timeframe, "previous");
     
 });
 
@@ -92,27 +97,27 @@ id("monthly").addEventListener("click", () => {
     const timeframe = "monthly";
     
     // for work
-    id("work-current").textContent = data[0].timeframes[timeframe].current;
-    id("work-previous").textContent = data[0].timeframes[timeframe].previous;
+    id("work-current").textContent = info(0, timeframe, "current");
+    id("work-previous").textContent = info(0, timeframe, "previous");
     
-    //for play
-    id("play-current").textContent = data[1].timeframes[timeframe].current;
-    id("play-previous").textContent = data[1].timeframes[timeframe].previous;
+    // for play
+    id("play-current").textContent = info(1, timeframe, "current");
+    id("play-previous").textContent = info(1, timeframe, "previous");
     
     // for study
-    id("study-current").textContent = data[2].timeframes[timeframe].current;
-    id("study-previous").textContent = data[2].timeframes[timeframe].previous;
+    id("study-current").textContent = info(2, timeframe, "current");
+    id("study-previous").textContent = info(2, timeframe, "previous");
     
     // for exercise
-    id("exercise-current").textContent = data[3].timeframes[timeframe].current;
-    id("exercise-previous").textContent = data[3].timeframes[timeframe].previous;
+    id("exercise-current").textContent = info(3, timeframe, "current");
+    id("exercise-previous").textContent = info(3, timeframe, "previous");;
     
     // for social
-    id("social-current").textContent = data[4].timeframes[timeframe].current;
-    id("social-previous").textContent = data[4].timeframes[timeframe].previous;
+    id("social-current").textContent = info(4, timeframe, "current");
+    id("social-previous").textContent = info(4, timeframe, "previous");
     
     // for self care
-    id("selfCare-current").textContent = data[5].timeframes[timeframe].current;
-    id("selfCare-previous").textContent = data[5].timeframes[timeframe].previous;
+    id("selfCare-current").textContent = info(5, timeframe, "current");
+    id("selfCare-previous").textContent = info(5, timeframe, "previous");
     
 });
