@@ -1,6 +1,14 @@
-import file from "./data.js"
+let data;
 
-const data = JSON.parse(file);
+fetch("data.json").then((response) => {
+    return response.json();
+
+}).then((result) => {
+    data = result;
+
+}).catch((err) => alert(`An Error Occurred: ${err.message}`));
+
+
 
 // id template 
 function id(id) {

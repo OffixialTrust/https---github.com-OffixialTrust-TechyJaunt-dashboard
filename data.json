@@ -1,4 +1,4 @@
-const file = `[
+[
   {
     "title": "Work",
     "timeframes": {
@@ -101,6 +101,4 @@ const file = `[
       }
     }
   }
-]`
-
-export default file;
+]
